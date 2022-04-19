@@ -16,15 +16,9 @@ export class MainPageComponent {
     poder: 0
   }
 
-  
- //Evento cuando llega el mensaje del componente agregar
-  addNuevoPersonaje( argumento : Personaje ){
-    //this.personajes.push(argumento);
-  }
-
   /**
    *
    */
-  constructor( private dbzService: DbzService) { }
+  constructor() { }
 
 }

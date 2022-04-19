@@ -14,6 +14,9 @@ export class AgregarComponent {
     poder: 0
   }
 
+  constructor(private dbzService: DbzService) { }
+
+  /*
   //Lo que genera este componente, hacia quien lo consume
   @Output() onNuevoPersonaje: EventEmitter<Personaje> = new EventEmitter();
 
@@ -28,7 +31,17 @@ export class AgregarComponent {
       poder: 0
     };
   }
+  Se cambia para usar Servicio
+  */
+  agregar() {
+    if (this.nuevo.nombre.trim().length === 0) { return; }
 
-  constructor( private dbzService: DbzService) { }
+    this.dbzService.agregarPersonaje( this.nuevo );
+    
+    this.nuevo = {
+      nombre: '',
+      poder: 0
+    };
+}
 
 }
