@@ -36,12 +36,12 @@ export class AgregarComponent {
   agregar() {
     if (this.nuevo.nombre.trim().length === 0) { return; }
 
-    this.dbzService.agregarPersonaje( this.nuevo );
-    
+    this.dbzService.agregarPersonaje(this.nuevo);
+
     this.nuevo = {
       nombre: '',
       poder: 0
     };
-}
+  }
 
 }
